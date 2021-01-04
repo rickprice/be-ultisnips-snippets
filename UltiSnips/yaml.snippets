@@ -1,5 +1,106 @@
 priority -40
 
-snippet BE_TEST "BE_TEST" b
-"${1:key}": "${0:value}",
+snippet alt_dep "Alternative Builder Dependency Sets" b
+    dependency_sets:
+      - dependencies:
+          - conditions:
+              - feature: Windows
+                namespace: kernel
+                requirements:
+                  - comparator: eq
+                    sortable_version:
+                      - '0'
+              - feature: alternative-built-language
+                namespace: language
+                requirements:
+                  - comparator: gte
+                    sortable_version:
+                      - '0'
+                    version: '0'
+            feature: "${1:autotools-builder}"
+            namespace: builder
+            requirements:
+              - comparator: gte
+                sortable_version:
+                  - '0'
+                version: '0'
+        type: build
+      - dependencies:
+          - conditions:
+              - feature: Windows
+                namespace: kernel
+                requirements:
+                  - comparator: gte
+                    sortable_version:
+                      - '0'
+                    version: '0'
+              - feature: alternative-built-language
+                namespace: language
+                requirements:
+                  - comparator: gte
+                    sortable_version:
+                      - '0'
+                    version: '0'
+              - feature: perl
+                namespace: language
+                requirements:
+                  - comparator: gte
+                    sortable_version:
+                      - '0'
+                    version: 5.30.0
+            feature: "${2:autotools-builder}"
+            namespace: builder
+            requirements:
+              - comparator: gte
+                sortable_version:
+                  - '0'
+                version: '0'
+        type: build
+      - dependencies:
+          - conditions:
+              - feature: alternative-built-language
+                namespace: language
+                requirements:
+                  - comparator: eq
+                    sortable_version:
+                      - '0'
+            feature: camel
+            namespace: builder
+            requirements:
+              - comparator: gte
+                sortable_version:
+                  - '0'
+                version: '0'
+        type: build
+      - dependencies:
+          - conditions:
+              - feature: Windows
+                namespace: kernel
+                requirements:
+                  - comparator: gte
+                    sortable_version:
+                      - '0'
+                    version: '0'
+              - feature: alternative-built-language
+                namespace: language
+                requirements:
+                  - comparator: gte
+                    sortable_version:
+                      - '0'
+                    version: '0'
+              - feature: python
+                namespace: language
+                requirements:
+                  - comparator: gte
+                    sortable_version:
+                      - '0'
+                    version: 3.9.0
+            feature: "{3:autotools-builder}"
+            namespace: builder
+            requirements:
+              - comparator: gte
+                sortable_version:
+                  - '0'
+                version: '0'
+        type: build
 endsnippet
