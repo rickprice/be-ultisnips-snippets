@@ -1,0 +1,13 @@
+{
+    "name": "be-ultisnips-snippets",
+    "author": [
+        "ActiveState/rickp"
+    ],
+    "maintainer": "rickp & others",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/rickp/be-ultisnips-snippets.git"
+    },
+    "dependencies": {},
+    "description": "Snippets of value to ActiveState BE group"
+}
