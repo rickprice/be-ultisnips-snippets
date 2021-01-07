@@ -14,6 +14,7 @@ snippet alt_test "testing" b
 endsnippet
 
 snippet alt_dep_full "Alternative Builder Dependency Sets" b
+# Linux Alternative Builder
 - dependencies:
     - conditions:
         - feature: Windows
@@ -29,7 +30,8 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
               sortable_version:
                 - '0'
               version: '0'
-      feature: autotools-builder
+      # Linux alternative builder
+      feature: ${1:autotools-builder}
       namespace: builder
       requirements:
         - comparator: gte
@@ -37,6 +39,7 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
             - '0'
           version: '0'
   type: build
+  # Windows Perl Alternative Builder
 - dependencies:
     - conditions:
         - feature: Windows
@@ -60,7 +63,8 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
               sortable_version:
                 - '0'
               version: 5.30.0
-      feature: autotools-builder-path-windows-at-end
+      # Windows Perl Alternative Builder
+      feature: ${2:autotools-builder}
       namespace: builder
       requirements:
         - comparator: gte
@@ -68,6 +72,7 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
             - '0'
           version: '0'
   type: build
+  # Camel builder dependency
 - dependencies:
     - conditions:
         - feature: alternative-built-language
@@ -84,6 +89,7 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
             - '0'
           version: '0'
   type: build
+  # Windows Python Alternative Builder
 - dependencies:
     - conditions:
         - feature: Windows
@@ -107,7 +113,8 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
               sortable_version:
                 - '0'
               version: 3.9.0
-      feature: cmake-builder
+      # Windows Python Alternative Builder
+      feature: ${3:cmake-builder}
       namespace: builder
       requirements:
         - comparator: gte
