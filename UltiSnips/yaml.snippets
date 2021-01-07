@@ -11,106 +11,106 @@ snippet alt_test "testing" b
                - '0'
 endsnippet
 
-snippet alt_dep_full "Alternative Builder Dependency Sets full" b
+snippet alt_dep_full "Alternative Builder Dependency Sets" b
 - dependencies:
-  - conditions:
-      - feature: Windows
-	namespace: kernel
-	requirements:
-	  - comparator: eq
-	    sortable_version:
-	      - '0'
-      - feature: alternative-built-language
-	namespace: language
-	requirements:
-	  - comparator: gte
-	    sortable_version:
-	      - '0'
-	    version: '0'
-    feature: autotools-builder
-    namespace: builder
-    requirements:
-      - comparator: gte
-	sortable_version:
-	  - '0'
-	version: '0'
-type: build
+    - conditions:
+        - feature: Windows
+          namespace: kernel
+          requirements:
+            - comparator: eq
+              sortable_version:
+                - '0'
+        - feature: alternative-built-language
+          namespace: language
+          requirements:
+            - comparator: gte
+              sortable_version:
+                - '0'
+              version: '0'
+      feature: autotools-builder
+      namespace: builder
+      requirements:
+        - comparator: gte
+          sortable_version:
+            - '0'
+          version: '0'
+  type: build
 - dependencies:
-  - conditions:
-      - feature: Windows
-	namespace: kernel
-	requirements:
-	  - comparator: gte
-	    sortable_version:
-	      - '0'
-	    version: '0'
-      - feature: alternative-built-language
-	namespace: language
-	requirements:
-	  - comparator: gte
-	    sortable_version:
-	      - '0'
-	    version: '0'
-      - feature: perl
-	namespace: language
-	requirements:
-	  - comparator: gte
-	    sortable_version:
-	      - '0'
-	    version: 5.30.0
-    feature: autotools-builder-path-windows-at-end
-    namespace: builder
-    requirements:
-      - comparator: gte
-	sortable_version:
-	  - '0'
-	version: '0'
-type: build
+    - conditions:
+        - feature: Windows
+          namespace: kernel
+          requirements:
+            - comparator: gte
+              sortable_version:
+                - '0'
+              version: '0'
+        - feature: alternative-built-language
+          namespace: language
+          requirements:
+            - comparator: gte
+              sortable_version:
+                - '0'
+              version: '0'
+        - feature: perl
+          namespace: language
+          requirements:
+            - comparator: gte
+              sortable_version:
+                - '0'
+              version: 5.30.0
+      feature: autotools-builder-path-windows-at-end
+      namespace: builder
+      requirements:
+        - comparator: gte
+          sortable_version:
+            - '0'
+          version: '0'
+  type: build
 - dependencies:
-  - conditions:
-      - feature: alternative-built-language
-	namespace: language
-	requirements:
-	  - comparator: eq
-	    sortable_version:
-	      - '0'
-    feature: camel
-    namespace: builder
-    requirements:
-      - comparator: gte
-	sortable_version:
-	  - '0'
-	version: '0'
-type: build
+    - conditions:
+        - feature: alternative-built-language
+          namespace: language
+          requirements:
+            - comparator: eq
+              sortable_version:
+                - '0'
+      feature: camel
+      namespace: builder
+      requirements:
+        - comparator: gte
+          sortable_version:
+            - '0'
+          version: '0'
+  type: build
 - dependencies:
-  - conditions:
-      - feature: Windows
-	namespace: kernel
-	requirements:
-	  - comparator: gte
-	    sortable_version:
-	      - '0'
-	    version: '0'
-      - feature: alternative-built-language
-	namespace: language
-	requirements:
-	  - comparator: gte
-	    sortable_version:
-	      - '0'
-	    version: '0'
-      - feature: python
-	namespace: language
-	requirements:
-	  - comparator: gte
-	    sortable_version:
-	      - '0'
-	    version: 3.9.0
-    feature: cmake-builder
-    namespace: builder
-    requirements:
-      - comparator: gte
-	sortable_version:
-	  - '0'
-	version: '0'
-type: build
+    - conditions:
+        - feature: Windows
+          namespace: kernel
+          requirements:
+            - comparator: gte
+              sortable_version:
+                - '0'
+              version: '0'
+        - feature: alternative-built-language
+          namespace: language
+          requirements:
+            - comparator: gte
+              sortable_version:
+                - '0'
+              version: '0'
+        - feature: python
+          namespace: language
+          requirements:
+            - comparator: gte
+              sortable_version:
+                - '0'
+              version: 3.9.0
+      feature: cmake-builder
+      namespace: builder
+      requirements:
+        - comparator: gte
+          sortable_version:
+            - '0'
+          version: '0'
+  type: build
 endsnippet
