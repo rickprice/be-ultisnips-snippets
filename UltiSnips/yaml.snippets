@@ -123,3 +123,15 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
           version: '0'
   type: build
 endsnippet
+
+snippet dep_shr "Shared dependency" b
+- dependencies:
+    - feature: ${1:Ingredient_name}
+      namespace: shared
+      requirements:
+        - comparator: gte
+          sortable_version:
+            - '0'
+          version: '0'
+  type: build
+endsnippet
