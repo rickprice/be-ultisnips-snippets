@@ -124,10 +124,10 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
   type: build
 endsnippet
 
-snippet dep_shr "Shared dependency" b
+snippet ing_dep "Ingredient dependency" b
 - dependencies:
     - feature: ${1:Ingredient_name}
-      namespace: shared
+      namespace: ${2:shared|language/python|language/perl}
       requirements:
         - comparator: gte
           sortable_version:
