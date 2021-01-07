@@ -15,17 +15,17 @@ snippet alt_dep_full "Alternative Builder Dependency Sets" b
 - dependencies:
     - conditions:
         - feature: Windows
-          namespace: kernel
-          requirements:
-            - comparator: eq
-              sortable_version:
-                - '0'
+            namespace: kernel
+            requirements:
+                - comparator: eq
+                  sortable_version:
+                     - '0'
         - feature: alternative-built-language
-          namespace: language
-          requirements:
-            - comparator: gte
-              sortable_version:
-                - '0'
+            namespace: language
+            requirements:
+                - comparator: gte
+                  sortable_version:
+                     - '0'
               version: '0'
       feature: autotools-builder
       namespace: builder
