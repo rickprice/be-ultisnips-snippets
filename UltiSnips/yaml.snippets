@@ -132,6 +132,7 @@ snippet ing_dep "Ingredient dependency" b
         - comparator: ${3|gte,gt,le,lte|}
           sortable_version:
             - '0'
-          version: ${4:0}
+          version: '${4:0}'
   type: ${5:|build|runtime|test|}
+  description: ${6:Description}
 endsnippet
