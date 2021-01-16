@@ -2,17 +2,6 @@
 
 priority -40
 
-snippet alt_test "testing" b
-- dependencies:
-    - conditions:
-        - feature: Windows
-          namespace: kernel
-          requirements:
-            - comparator: eq
-              sortable_version:
-              - '0'
-endsnippet
-
 snippet alt_bld_dep_full "Alternative Builder Dependency Sets" b
 # Linux Alternative Builder
 - dependencies:
