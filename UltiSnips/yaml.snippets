@@ -125,14 +125,13 @@ snippet alt_bld_dep_full "Alternative Builder Dependency Sets" b
 endsnippet
 
 snippet ing_dep "Ingredient dependency" b
-- dependencies:
-    - feature: ${1:Ingredient_name}
-      namespace: ${2|shared,language/python,language/perl|}
-      requirements:
-        - comparator: ${3|gte,gt,le,lte|}
-          sortable_version:
-            - '0'
-          version: '${4:0}'
+- feature: ${1:Ingredient_name}
+  namespace: ${2|shared,language/python,language/perl|}
+  requirements:
+    - comparator: ${3|gte,gt,le,lte|}
+      sortable_version:
+        - '0'
+      version: '${4:0}'
   type: ${5|build,runtime,test|}
   description: ${6:Description}
 endsnippet
